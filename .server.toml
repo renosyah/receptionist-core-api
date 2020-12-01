@@ -1,0 +1,25 @@
+[app]
+name = "receptionist-core-api"
+version = "0.0.1"
+host = "localhost"
+port = 8080
+read_timeout = 5
+write_timeout = 10
+idle_timeout = 15
+
+[auth]
+enable = false
+
+[database]
+host = "localhost"
+port = 5432
+name = "receptionist_db"
+sslmode = "disable"
+username = "postgres"
+password = "123"
+
+[midtrans]
+server_key = ""
+client_key = ""
+enviroment = "sanbox"
+callback = "http://localhost:8080/midtrans"
