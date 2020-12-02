@@ -1444,6 +1444,34 @@
 					"response": []
 				},
 				{
+					"name": "sum",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"booking_id\": \"6c04ae8e-cdd6-425b-88f8-85ff36ed4a11\",\n    \"payment_status\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/v1/transactions-sum",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions-sum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "update",
 					"request": {
 						"method": "PUT",
