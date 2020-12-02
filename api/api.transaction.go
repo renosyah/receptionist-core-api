@@ -59,6 +59,19 @@ func (m TransactionModule) Add(ctx context.Context, param model.Transaction) (mo
 	return param.Response(), nil
 }
 
+func (m TransactionModule) Sum(ctx context.Context, param model.SumTransactionParam) (model.SumTransaction, *Error) {
+	data, err := param.Sum(ctx, m.db)
+	if err != nil {
+		status := http.StatusInternalServerError
+		message := "error on get sum Transaction"
+
+		return model.SumTransaction{}, NewErrorWrap(err, m.Name, "sum/Transaction",
+			message, status)
+	}
+
+	return data, nil
+}
+
 func (m TransactionModule) One(ctx context.Context, param model.Transaction) (model.TransactionResponse, *Error) {
 	data, err := param.One(ctx, m.db)
 	if err != nil {

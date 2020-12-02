@@ -86,9 +86,9 @@ func (m MidtransModule) ProcessMidtransNotification(ctx context.Context, param m
 	}
 
 	b := &model.Booking{ID: t.BookingID}
-	bill, err := b.One(ctx, m.db)
+	booking, err := b.One(ctx, m.db)
 	if err != nil {
-		return errors.New("error on get one Bill")
+		return errors.New("error on get one booking")
 	}
 
 	switch param.TransactionStatus {
@@ -141,7 +141,7 @@ func (m MidtransModule) ProcessMidtransNotification(ctx context.Context, param m
 	}
 
 	tSum := &model.SumTransactionParam{
-		BillID:        bill.ID,
+		BookingID:     booking.ID,
 		PaymentStatus: model.TRANSACTION_STATUS_SUCCESS,
 	}
 	tsum, errSum := tSum.Sum(ctx, m.db)
@@ -149,13 +149,13 @@ func (m MidtransModule) ProcessMidtransNotification(ctx context.Context, param m
 		return errSum
 	}
 
-	if tsum.Amount.Cmp(bill.Total) >= 0 {
-		bill.PaymentStatus = model.TRANSACTION_STATUS_SUCCESS
+	if tsum.Total.Cmp(booking.Total) >= 0 {
+		booking.PaymentStatus = model.TRANSACTION_STATUS_SUCCESS
 	}
 
-	ib, err := bill.Update(ctx, m.db)
+	ib, err := booking.Update(ctx, m.db)
 	if err != nil || ib == emptyBUUID {
-		return errors.New("error on update Bill")
+		return errors.New("error on update booking")
 	}
 
 	return nil

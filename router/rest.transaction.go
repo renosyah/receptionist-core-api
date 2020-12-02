@@ -50,6 +50,19 @@ func HandlerOneTransaction(w http.ResponseWriter, r *http.Request) (interface{},
 	return transactionModule.One(ctx, model.Transaction{ID: id})
 }
 
+func HandlerSumTransaction(w http.ResponseWriter, r *http.Request) (interface{}, *api.Error) {
+	ctx := r.Context()
+	var param model.SumTransactionParam
+
+	err := ParseBodyData(ctx, r, &param)
+	if err != nil {
+		return nil, api.NewError(errors.Wrap(err, "Transaction/sum/param"),
+			http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+	}
+
+	return transactionModule.Sum(ctx, param)
+}
+
 func HandlerUpdateTransaction(w http.ResponseWriter, r *http.Request) (interface{}, *api.Error) {
 	ctx := r.Context()
 	vars := mux.Vars(r)

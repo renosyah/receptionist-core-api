@@ -109,6 +109,7 @@ var rootCmd = &cobra.Command{
 		// transaction
 		apiRouter.Handle("/transactions", router.HandlerFunc(router.HandlerAddTransaction)).Methods(http.MethodPost)
 		apiRouter.Handle("/transactions-list", router.HandlerFunc(router.HandlerAllTransaction)).Methods(http.MethodPost)
+		apiRouter.Handle("/transactions-sum", router.HandlerFunc(router.HandlerSumTransaction)).Methods(http.MethodPost)
 		apiRouter.Handle("/transactions/{id}", router.HandlerFunc(router.HandlerOneTransaction)).Methods(http.MethodGet)
 		apiRouter.Handle("/transactions/{id}", router.HandlerFunc(router.HandlerUpdateTransaction)).Methods(http.MethodPut)
 		apiRouter.Handle("/transactions/{id}", router.HandlerFunc(router.HandlerDeleteTransaction)).Methods(http.MethodDelete)

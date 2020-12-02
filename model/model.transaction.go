@@ -21,12 +21,12 @@ const (
 
 type (
 	SumTransactionParam struct {
-		BillID        uuid.UUID `json:"bill_id"`
+		BookingID     uuid.UUID `json:"booking_id"`
 		PaymentStatus int       `json:"payment_status"`
 	}
 
 	SumTransaction struct {
-		Amount decimal.Decimal `json:"total"`
+		Total decimal.Decimal `json:"total"`
 	}
 
 	Transaction struct {
@@ -179,9 +179,9 @@ func (t *Transaction) One(ctx context.Context, db *sql.DB) (Transaction, error) 
 func (u *SumTransactionParam) Sum(ctx context.Context, db *sql.DB) (SumTransaction, error) {
 	one := SumTransaction{}
 
-	query := `SELECT COALESCE(SUM(amount),0) FROM "transaction" WHERE bill_id = $1 AND payment_status = $2 LIMIT 1`
-	err := db.QueryRowContext(ctx, fmt.Sprintf(query), u.BillID, u.PaymentStatus).Scan(
-		&one.Amount,
+	query := `SELECT COALESCE(SUM(total),0) FROM "transaction" WHERE booking_id = $1 AND payment_status = $2 LIMIT 1`
+	err := db.QueryRowContext(ctx, fmt.Sprintf(query), u.BookingID, u.PaymentStatus).Scan(
+		&one.Total,
 	)
 	if err != nil {
 		return one, err
