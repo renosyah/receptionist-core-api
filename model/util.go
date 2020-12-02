@@ -6,11 +6,18 @@ import (
 	"strings"
 )
 
+var (
+	columNameNotFound error = errors.New("column name not found!")
+	columOrderDir     error = errors.New("column order direction must asc or desc!")
+
+	ascDesc []string = []string{"ASC", "DESC"}
+)
+
 type (
 	ListQuery struct {
 		Filters map[string]interface{} `json:"filters"`
 		Search  map[string]interface{} `json:"search"`
-		Orders  map[string]interface{} `json:"orders"`
+		Orders  map[string]string      `json:"orders"`
 		Offset  int64                  `json:"offset"`
 		Limit   int64                  `json:"limit"`
 	}
@@ -25,7 +32,7 @@ func (l *ListQuery) Query(colums []string) (string, []interface{}, error) {
 	for k, v := range l.Filters {
 
 		if !l.isExist(k, colums) {
-			return "", args, errors.New("column not found!")
+			return "", args, columNameNotFound
 		}
 
 		filtersQuery = fmt.Sprintf("%s %s = $%d", filtersQuery, k, pos)
@@ -38,7 +45,7 @@ func (l *ListQuery) Query(colums []string) (string, []interface{}, error) {
 	for k, v := range l.Search {
 
 		if !l.isExist(k, colums) {
-			return "", args, errors.New("column not found!")
+			return "", args, columNameNotFound
 		}
 
 		searchQuery = fmt.Sprintf("%s %s LIKE $%d", searchQuery, k, pos)
@@ -56,10 +63,14 @@ func (l *ListQuery) Query(colums []string) (string, []interface{}, error) {
 	for k, v := range l.Orders {
 
 		if !l.isExist(k, colums) {
-			return "", args, errors.New("column not found!")
+			return "", args, columNameNotFound
 		}
 
-		ordersQuery = fmt.Sprintf("ORDER BY %s %v", k, v)
+		if !l.isExist(v, ascDesc) {
+			return "", args, columOrderDir
+		}
+
+		ordersQuery = fmt.Sprintf("ORDER BY %s %v", k, strings.ToUpper(v))
 		break
 	}
 
@@ -76,7 +87,7 @@ func (l *ListQuery) Query(colums []string) (string, []interface{}, error) {
 
 func (l *ListQuery) isExist(n string, list []string) bool {
 	for _, v := range list {
-		if n == v {
+		if strings.ToLower(n) == strings.ToLower(v) {
 			return true
 		}
 	}
