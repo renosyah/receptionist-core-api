@@ -328,7 +328,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"filters\" : {\n        \"id\" : \"89852144-d958-4223-86a0-5300c1b27c25\",\n        \"name\":\"rikka takahasi\"\n    },\n    \"search\": {\n        \"email\":\"rikka@gmail.com\"\n    },\n    \"orders\": {\n        \"name\":\"ASC\"\n    },\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"raw": "{\n    \"filters\" : {\n \n    },\n    \"search\": {\n        \"email\":\"rikka@gmail.com\"\n    },\n    \"orders\": {\n        \"name\":\"ASC\"\n    },\n    \"offset\": 0,\n    \"limit\": 10\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -473,7 +473,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"owner_id\": \"89852144-d958-4223-86a0-5300c1b27c25\",\n    \"name\": \"Miku Cafe\",\n    \"description\": \"kafe untuk para wibu\",\n    \"image_url\": \"https://dolanyok.com/wp-content/uploads/2019/12/Silol-Kopi-Eatery.jpg\",\n    \"latitude\": -7.814995,\n    \"longitude\": 110.35595\n}",
+							"raw": "{\n    \"owner_id\": \"58735ae9-d4d0-41c4-b851-4c7d4a303f5b\",\n    \"name\": \"Miku Cafe\",\n    \"description\": \"kafe untuk para wibu\",\n    \"image_url\": \"https://dolanyok.com/wp-content/uploads/2019/12/Silol-Kopi-Eatery.jpg\",\n    \"latitude\": -7.814995,\n    \"longitude\": 110.35595\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -652,7 +652,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"store_id\": \"fbe9330e-18d5-4633-8df1-ca5cc408f531\",\n    \"name\": \"Kursi tengah Kafe jogja\",\n    \"description\": \"kursi bagian engah dari kafe untuk nongkrong bareng temen\",\n    \"position\": 2,\n    \"price\": \"20000.0\"\n}",
+							"raw": "{\n    \"store_id\": \"6ab6ffe6-b2be-41f1-a1db-f6e7b24566af\",\n    \"name\": \"Kursi depan Kafe jogja\",\n    \"description\": \"kursi bagian depan dari kafe untuk nongkrong bareng temen\",\n    \"position\": 1,\n    \"price\": \"20000.0\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -680,7 +680,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"filters\" : {\n        \"store_id\": \"fbe9330e-18d5-4633-8df1-ca5cc408f531\"\n    },\n    \"search\": {\n        \"name\": \"Kursi\"\n    },\n    \"orders\": {\n        \"name\":\"ASC\"\n    },\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"raw": "{\n    \"filters\" : {\n        \n    },\n    \"search\": {\n\n    },\n    \"orders\": {\n        \"name\":\"ASC\"\n    },\n    \"offset\": 0,\n    \"limit\": 10\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -825,7 +825,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"store_id\": \"fbe9330e-18d5-4633-8df1-ca5cc408f531\",\n    \"name\": \"Espresso coklat 2\",\n    \"description\": \"kopi paling populer dari kafe untuk nongkrong bareng temen\",\n    \"image_url\": \"/img/cafe_product.jpg\",\n    \"price\": \"14000.0\"\n}",
+							"raw": "{\n    \"store_id\": \"6ab6ffe6-b2be-41f1-a1db-f6e7b24566af\",\n    \"name\": \"Espresso coklat 1\",\n    \"description\": \"kopi paling populer dari kafe untuk nongkrong bareng temen\",\n    \"image_url\": \"/img/cafe_product.jpg\",\n    \"price\": \"14000.0\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -853,7 +853,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"filters\" : {\n        \"store_id\": \"fbe9330e-18d5-4633-8df1-ca5cc408f531\"\n    },\n    \"search\": {\n        \"name\": \"2\"\n    },\n    \"orders\": {\n        \"name\":\"ASC\"\n    },\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"raw": "{\n    \"filters\" : {\n         \n    },\n    \"search\": {\n        \n    },\n    \"orders\": {\n        \"name\":\"ASC\"\n    },\n    \"offset\": 0,\n    \"limit\": 10\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -998,7 +998,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customer_id\": \"a0c63e7d-880a-45d7-ad1c-b756b6855d1e\",\n    \"seats_id\": \"c0fbc833-163f-4f8f-80a8-dc63912ca403\",\n    \"duration_from\" : \"2020-09-29T03:00:00+00:00\",\n    \"duration_to\" : \"2020-09-29T04:00:00+00:00\",\n    \"price\": \"30000.0\",\n    \"total\": \"30000.0\",\n    \"payment_status\":1\n}",
+							"raw": "{\n    \"customer_id\": \"cf1e1d34-e8ee-432c-9993-af8b01e53c1c\",\n    \"total\": \"30000.0\",\n    \"payment_status\":1\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1026,7 +1026,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"filters\" : {\n        \"customer_id\": \"a0c63e7d-880a-45d7-ad1c-b756b6855d1e\",\n        \"payment_status\":1\n    },\n    \"search\": {\n \n    },\n    \"orders\": {\n        \"duration_from\":\"DESC\"\n    },\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"raw": "{\n    \"filters\" : {\n\n    },\n    \"search\": {\n \n    },\n    \"orders\": {\n\n    },\n    \"offset\": 0,\n    \"limit\": 10\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1090,7 +1090,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "d70c2103-104a-48f8-aaf3-b05c99e79c14"
+									"value": "459c19a7-ac30-4234-884b-d30622d19158"
 								}
 							]
 						}
@@ -1104,7 +1104,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customer_id\": \"f079fba4-5de2-49c9-a775-0b0a21fbcad5\",\n    \"seats_id\": \"694114b4-86f7-441d-babc-c74ceb07e603\",\n    \"booking_time\" : \"2020-09-29T12:00:00Z\",\n    \"duration\" : 1, \n    \"price\": \"20000.0\",\n    \"total\": \"48000.0\"\n}",
+							"raw": "{\n    \"customer_id\": \"cf1e1d34-e8ee-432c-9993-af8b01e53c1c\",\n    \"total\": \"30000.2\",\n    \"payment_status\": 1\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1125,7 +1125,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "286955c7-3ab8-4ec2-955a-e078a4dbc2d6"
+									"value": "459c19a7-ac30-4234-884b-d30622d19158"
 								}
 							]
 						}
@@ -1151,7 +1151,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "d70c2103-104a-48f8-aaf3-b05c99e79c14"
+									"value": "459c19a7-ac30-4234-884b-d30622d19158"
 								}
 							]
 						}
@@ -1171,7 +1171,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"booking_id\": \"6c04ae8e-cdd6-425b-88f8-85ff36ed4a11\",\n    \"product_id\": \"c1062030-c275-489b-9ec2-75a63ea232a9\",\n    \"price\": \"14000\",\n    \"quantity\": 2,\n    \"sub_total\": \"28000.0\"\n}",
+							"raw": "{\n    \"booking_id\": \"459c19a7-ac30-4234-884b-d30622d19158\",\n    \"product_id\": \"6047e021-23d1-43c8-8dbf-ce9a144af082\",\n    \"price\": \"14000\",\n    \"quantity\": 2,\n    \"sub_total\": \"28000.0\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1325,6 +1325,179 @@
 								{
 									"key": "id",
 									"value": "4390e78c-1acd-4f9e-9f37-1ea3784ee57a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "booking seats",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"booking_id\": \"459c19a7-ac30-4234-884b-d30622d19158\",\n    \"seats_id\": \"a3c06acc-9342-48ec-92e1-e62f83e0e4c8\",\n    \"price\": \"14000\",\n    \"sub_total\": \"28000.0\",\n    \"duration_from\": \"2020-01-01T12:00:00Z\",\n    \"duration_to\": \"2020-01-01T13:00:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/v1/bookings-seats",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings-seats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filters\" : {\n        \n    },\n    \"search\": {\n \n    },\n    \"orders\": {\n        \"sub_total\":\"ASC\"\n    },\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/v1/bookings-seats-list",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings-seats-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "5dfd53f4-46ed-411d-8418-d0b431754797",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/v1/bookings-seats/:id",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings-seats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60fd25ff-baef-4be1-b60f-21b349a0c26a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"booking_id\": \"459c19a7-ac30-4234-884b-d30622d19158\",\n    \"seats_id\": \"a3c06acc-9342-48ec-92e1-e62f83e0e4c8\",\n    \"price\": \"14000\",\n    \"sub_total\": \"28000.0\",\n    \"duration_from\": \"2020-01-01T12:00:00Z\",\n    \"duration_to\": \"2020-01-01T14:00:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/v1/bookings-seats/:id",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings-seats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60fd25ff-baef-4be1-b60f-21b349a0c26a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/v1/bookings-seats/:id",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings-seats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "c45b1b37-395c-4e73-b502-660549db9413"
 								}
 							]
 						}

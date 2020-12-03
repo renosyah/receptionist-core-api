@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS "seats" CASCADE;
 DROP TABLE IF EXISTS "product" CASCADE;
 DROP TABLE IF EXISTS "booking" CASCADE;
 DROP TABLE IF EXISTS "booking_detail" CASCADE;
+DROP TABLE IF EXISTS "booking_seats" CASCADE;
 DROP TABLE IF EXISTS "transaction" CASCADE;
 
 CREATE TABLE "customer" (
@@ -70,12 +71,21 @@ CREATE TABLE "product" (
 CREATE TABLE "booking" (
     id UUID NOT NULL DEFAULT gen_random_uuid(),
     customer_id UUID NOT NULL REFERENCES customer (id),
+    payment_status INT NOT NULL DEFAULT 1,
+    total DECIMAL NOT NULL DEFAULT '0',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()::TIMESTAMPTZ,
+    flag_status INT NOT NULL DEFAULT 0,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE "booking_seats" (
+    id UUID NOT NULL DEFAULT gen_random_uuid(),
+    booking_id UUID NOT NULL REFERENCES booking (id),
     seats_id UUID NOT NULL REFERENCES seats (id), 
     price DECIMAL NOT NULL DEFAULT '0',
-    total DECIMAL NOT NULL DEFAULT '0',
-    duration_from TIMESTAMPTZ NULL,
-    duration_to TIMESTAMPTZ NULL,
-    payment_status INT NOT NULL DEFAULT 0,
+    sub_total DECIMAL NOT NULL DEFAULT '0',
+    duration_from TIMESTAMP NULL,
+    duration_to TIMESTAMP NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now()::TIMESTAMPTZ,
     flag_status INT NOT NULL DEFAULT 0,
     PRIMARY KEY (id)
@@ -99,7 +109,7 @@ CREATE TABLE "transaction" (
     customer_id UUID NOT NULL REFERENCES customer (id),
     total DECIMAL NOT NULL DEFAULT '0',
     payment_type INT NOT NULL DEFAULT 0, 
-    payment_status INT NOT NULL DEFAULT 0,
+    payment_status INT NOT NULL DEFAULT 1,
     payment_order_id TEXT NOT NULL DEFAULT '',
     payment_id TEXT NOT NULL DEFAULT '',
     payment_time TEXT NOT NULL DEFAULT '', 

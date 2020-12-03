@@ -23,6 +23,7 @@ var (
 	productModule       *api.ProductModule
 	bookingModule       *api.BookingModule
 	bookingDetailModule *api.BookingDetailModule
+	bookingSeatsModule  *api.BookingSeatsModule
 	transactionModule   *api.TransactionModule
 	midtransModule      *api.MidtransModule
 )
@@ -38,6 +39,7 @@ func Init(db *sql.DB, p *mid.PaymentGateway) {
 	bookingModule = api.NewBookingModule(db)
 	bookingDetailModule = api.NewBookingDetailModule(db)
 	transactionModule = api.NewTransactionModule(db)
+	bookingSeatsModule = api.NewBookingSeatsModule(db)
 	midtransModule = api.NewMidtransModule(db, p)
 }
 

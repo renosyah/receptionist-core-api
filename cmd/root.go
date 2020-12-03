@@ -106,6 +106,13 @@ var rootCmd = &cobra.Command{
 		apiRouter.Handle("/bookings-details/{id}", router.HandlerFunc(router.HandlerUpdateBookingDetail)).Methods(http.MethodPut)
 		apiRouter.Handle("/bookings-details/{id}", router.HandlerFunc(router.HandlerDeleteBookingDetail)).Methods(http.MethodDelete)
 
+		// booking seats
+		apiRouter.Handle("/bookings-seats", router.HandlerFunc(router.HandlerAddBookingSeats)).Methods(http.MethodPost)
+		apiRouter.Handle("/bookings-seats-list", router.HandlerFunc(router.HandlerAllBookingSeats)).Methods(http.MethodPost)
+		apiRouter.Handle("/bookings-seats/{id}", router.HandlerFunc(router.HandlerOneBookingSeats)).Methods(http.MethodGet)
+		apiRouter.Handle("/bookings-seats/{id}", router.HandlerFunc(router.HandlerUpdateBookingSeats)).Methods(http.MethodPut)
+		apiRouter.Handle("/bookings-seats/{id}", router.HandlerFunc(router.HandlerDeleteBookingSeats)).Methods(http.MethodDelete)
+
 		// transaction
 		apiRouter.Handle("/transactions", router.HandlerFunc(router.HandlerAddTransaction)).Methods(http.MethodPost)
 		apiRouter.Handle("/transactions-list", router.HandlerFunc(router.HandlerAllTransaction)).Methods(http.MethodPost)
